@@ -1,0 +1,36 @@
+{% from '../../macros/icon.twig' import icon %}
+
+<div class="intro">
+	<div class="container">
+    <div class="intro__play">
+      <a href="#">{{ icon('play', {'width': 32, 'height': 32}) }}</a>
+      <svg class="circle" viewBox="0 0 85 85">
+        <path id="circle" d="M 0,75 a 75,75 0 1,1 0,1 z" />
+        <text>
+          <textPath xlink:href="#circle">
+            Видео компании «ЭКОЛОМ» &nbsp; Видео компании «ЭКОЛОМ»  &nbsp;
+          </textPath>
+        </text>
+      </svg>
+    </div>
+		<div class="intro__holder">
+			<div class="intro__content">
+				<h1 class="intro__title">
+					Приём лома чёрных 
+					и цветных металлов 
+					<span>в Санкт-Петербурге</span>
+				</h1>
+        <ul class="intro__tags">
+          <li> <a href="#" class="btn btn-outline">Цены на сегодня</a></li>
+          <li> <a href="#" class="btn btn-outline">Как сдать металл</a></li>
+          <li> <a href="#" class="btn btn-outline">Отзывы</a></li>
+          <li> <a href="#" class="btn btn-outline">Акции</a></li>
+        </ul>
+        <a href="#" class="btn">Оставить заявку</a>
+			</div>
+		</div>
+	</div>
+  <div class="intro__img">
+    <img src="assets/images/intro/car.png" alt="car">
+  </div>	
+</div>

@@ -1,0 +1,64 @@
+{% from '../macros/icon.twig' import icon %}
+
+<header class="header">
+	<div class="container">
+    <div class="header__holder">
+      <div class="header__logo-holder">
+        <a href="/" class="header__logo">
+          {{ icon('logo' , {'width': 196, 'height': 58}) }}
+        </a>
+        <span class="header__schedule">Ежедневно с 9:00 до 21:00</span>
+      </div>
+      <form action="" class="header__search">
+        {{ icon('search' , {'width': 24, 'height': 24}) }}
+        <input type="search" placeholder="Поиск по сайту">
+      </form>
+      <a href="#" class="header__calc">Калькулятор</a>
+      <ul class="header__socials">
+        <li>
+          <a href="#">
+            {{ icon('whatsApp' , {'width': 30, 'height': 30}) }}
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            {{ icon('Tg' , {'width': 30, 'height': 30}) }}
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            {{ icon('viber' , {'width': 30, 'height': 30}) }}
+          </a>
+        </li>
+      </ul>
+      <div class="header__info">
+        <div class="header__phone">+7 (812) 926-88-33</div>
+        <a href="mailto:info@eco-lom.ru">info@eco-lom.ru</a>
+      </div>
+      <a href="#" class="btn btn-outline header__callback">Перезвоните мне</a>
+    </div>
+	</div>
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="main-nav__holder">
+        {% for item in navigation %}
+          {% if item.children|default(false) and item.children|length %}
+            <li class="has-children">
+              <span>{{ item.title }}</span>
+              <div class="sub-nav">
+                <ul>
+                  {% for item in item.children %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+          {% else %}
+            <li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+	</nav>
+</header>
+

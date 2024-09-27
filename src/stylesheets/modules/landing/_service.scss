@@ -1,0 +1,26 @@
+.service {
+  margin-bottom: 100px;
+
+  &__holder {
+    border-top: 2px solid $color-orange;
+    border-bottom: 2px solid $color-orange;
+    padding: 42px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: block;
+    font-size: 42px;
+    font-weight: 600;
+    width: 30%;
+    line-height: normal;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 60%;
+  }
+}

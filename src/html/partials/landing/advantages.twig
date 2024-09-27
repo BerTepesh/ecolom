@@ -1,0 +1,47 @@
+{% from '../../macros/icon.twig' import icon %}
+
+<div class="advantages">
+    <div class="container">
+        <div class="advantages__holder">
+            <div class="advantages__item">
+                <div class="advantages-item">
+                    <div class="advantages-item__name">
+                        <div class="advantages-item__ico">
+                          {{ icon('credit-card', {'width': 24, 'height': 24}) }}
+                        </div>
+                        Моментальный расчёт
+                    </div>
+                    <div class="advantages-item__text">
+                      Мгновенная оплата по безналичному расчету на месте приёма
+                    </div>
+                </div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages-item">
+                  <div class="advantages-item__name">
+                      <div class="advantages-item__ico">
+                        {{ icon('trending-up', {'width': 24, 'height': 24}) }}
+                      </div>
+                      Высокая цена закупки
+                  </div>
+                  <div class="advantages-item__text">
+                    Максимальная высокая цена закупки лома на рынке Санкт-Петербурга
+                  </div>
+              </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages-item">
+                <div class="advantages-item__name">
+                    <div class="advantages-item__ico">
+                      {{ icon('truck', {'width': 24, 'height': 24}) }}
+                    </div>
+                    Собственный автопарк
+                </div>
+                <div class="advantages-item__text">
+                  Свой автопарк, в составе которого более 30 единиц спецтехники
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
